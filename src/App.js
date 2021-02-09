@@ -3,9 +3,13 @@ import { useState, useEffect } from "react";
 
 function App() {
   //add useState for all state variables
-
+  var input = useState("Nothing");
+  var name = input[0];
+  var gender = input[1];
+  var age = input[2]
   //load locationStorage
   useEffect(() => {
+    //localStorage.setItem("items", );
     const items = localStorage.getItem("items");
     // ...
   }, []);
@@ -40,15 +44,21 @@ function App() {
           <input className="input" type="number" placeholder="e.q 5"></input>
         </div>
 
-        <button className="button is-danger is-fullwidth">Submit</button>
+        <button
+          onClick={() => }
+          className="button is-danger is-fullwidth"
+        >
+          Submit
+        </button>
 
         <div className="mb-4"></div>
 
         {/* display tables for all persons */}
         <p className="is-4 title has-text-centered">Pet List</p>
+
         {/* sample table */}
         <ItemTable name={"Coco"} gender={"Male"} age={"5"} />
-        <p>Your name and code here</p>
+        <p>Thanakorn Chaininphun 620610790</p>
       </div>
     </div>
   );
